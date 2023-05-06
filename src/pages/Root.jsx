@@ -1,14 +1,16 @@
-import { Outlet } from "react-router-dom";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 
+import React,{useState} from 'react'
+import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
+import { Box } from "@mui/material";
+import Drawerr from "../components/Drawer";
 export default function Root() {
     return (
         <>
-            <Nav/>
-            <div>
+            <Drawerr/>
+            <Box>
                 <Outlet />
-            </div>
+            </Box>
             <Footer/>
         </>
     )
