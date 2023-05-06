@@ -29,7 +29,7 @@ export default function AppBarr({drawerWidth,handleDrawerToggle}){
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            Housam Hegazy
           </Typography>
         </Toolbar>
       </AppBar>
