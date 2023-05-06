@@ -1,8 +1,9 @@
+import { Box } from "@mui/material";
 
 
 
-export default function Footer(){
+export default function Footer({drawerWidth}){
     return (
-        <h1>Footer</h1>
+        <Box sx={{width:{xs:"100%",sm:`calc(100% - ${drawerWidth}px)`},ml:{sm:`${drawerWidth}px`}}}>footer</Box>
     )
 }
