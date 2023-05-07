@@ -1,7 +1,7 @@
 import { ExpandMore } from "@mui/icons-material";
+import maltimart from '../../assest/images/maltimart.png'
+import { projects } from "assest/data";
 import {
-  Avatar,
-  Box,
   Card,
   CardActions,
   CardContent,
@@ -16,12 +16,12 @@ import {
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const projects = [
-  { imgURL: "", name: "fbApp", id: 1, details: "", skills: "React,Mui,Css3" },
-  { imgURL: "", name: "fbApp", id: 2, details: "", skills: "React,Mui,Css3" },
-  { imgURL: "", name: "fbApp", id: 3, details: "", skills: "React,Mui,Css3" },
-  { imgURL: "", name: "fbApp", id: 4, details: "", skills: "React,Mui,Css3" },
-];
+// const projects = [
+//   { imgURL: `${maltimart}`, name: "fbApp", id: 1, details: "", skills: "React,Mui,Css3" },
+//   { imgURL: "", name: "fbApp", id: 2, details: "", skills: "React,Mui,Css3" },
+//   { imgURL: "", name: "fbApp", id: 3, details: "", skills: "React,Mui,Css3" },
+//   { imgURL: "", name: "fbApp", id: 4, details: "", skills: "React,Mui,Css3" },
+// ];
 export default function MyWorks() {
   const theme = useTheme();
   const navigate = useNavigate()
@@ -51,8 +51,8 @@ export default function MyWorks() {
             <CardMedia
               component="img"
               height="194"
-              image="https://mui.com/static/images/cards/paella.jpg"
-              alt="Paella dish"
+              image={`${project.imgURL}`}
+              // alt="Paella dish"
               sx={{cursor:"pointer"}}
               onClick={()=>{
                 navigate(`productdetails/${project.id}`)
