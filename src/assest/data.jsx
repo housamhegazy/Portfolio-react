@@ -1,4 +1,4 @@
-import maltimart from '../../assest/images/maltimart.png'
+import maltimart from './images/maltimart.png'
 
 export const projects = [
     { imgURL: `${maltimart}`, name: "fbApp", id: 1, details: "", skills: "React,Mui,Css3" },
