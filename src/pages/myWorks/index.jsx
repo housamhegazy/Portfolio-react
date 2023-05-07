@@ -38,7 +38,7 @@ export default function MyWorks() {
             <CardMedia
               component="img"
               height="194"
-              image={`${project.imgURL}`}
+              image={`${project.imgURL[0]}`}
               // alt="Paella dish"
               sx={{cursor:"pointer"}}
               onClick={()=>{

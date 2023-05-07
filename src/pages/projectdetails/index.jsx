@@ -6,7 +6,6 @@ import Overlay from "./Overlay";
 
 export default function ProjectDetails() {
   const param = useParams();
-  console.log(param.id);
   const project = projects.find((item) => item.id === Number(param.id));
   const [isOpen, setisOpen] = useState(false);
   return (
@@ -25,28 +24,27 @@ export default function ProjectDetails() {
             justifyContent: "center",
           }}
         >
-          <Box sx={{ width: "200px", height: "300px", overflow: "hidden" }}>
-            <img
-              style={{ width: "100%", cursor: "pointer" }}
-              src={project.imgURL}
-              alt="img"
-              onClick={()=>{
-                setisOpen(true)
-              }}
-            />
-          </Box>
-          <Box sx={{ width: "200px", height: "300px", overflow: "hidden" }}>
-            <img style={{ width: "100%" }} src={project.imgURL} alt="img" />
-          </Box>
-          <Box sx={{ width: "200px", height: "300px", overflow: "hidden" }}>
-            <img style={{ width: "100%" }} src={project.imgURL} alt="img" />
-          </Box>
+          {project.imgURL.map((url, index) => {
+            return (
+              <Box
+                key={index}
+                sx={{ width: "200px", height: "300px", overflow: "hidden" }}
+              >
+                <img
+                  style={{ width: "100%", cursor: "pointer" }}
+                  src={url}
+                  alt="img"
+                  onClick={() => {
+                    setisOpen(true);
+                  }}
+                />
+              </Box>
+            );
+          })}
         </Stack>
       </Box>
       {/* overlay */}
-      {isOpen && (
-        <Overlay {...{project,setisOpen}}/>
-      )}
+      {isOpen && <Overlay {...{ project, setisOpen }} />}
     </Box>
   );
 }
