@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function AppBarr({drawerWidth,handleDrawerToggle}){
+export default function AppBarr({drawerWidth,handleDrawerToggle,theme}){
     return (
-        <AppBar position="static" sx={{width:{xs:"100%",sm:`calc(100% - ${drawerWidth}px)`},ml:{sm:`${drawerWidth}px`}}}>
+        <AppBar position="static" sx={{background:theme.palette.primary.main,width:{xs:"100%",sm:`calc(100% - ${drawerWidth}px)`},ml:{sm:`${drawerWidth}px`}}}>
         <Toolbar>
           <IconButton
           onClick={()=>{

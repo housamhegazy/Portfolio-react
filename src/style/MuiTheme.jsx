@@ -12,6 +12,9 @@ const getDesignTokens = (mode) => ({
               faveColor: {
                 main: "rgb(247,247,247)",
               },
+              primary:{
+                main:"#01579b"
+              }
              
             }
           : {
@@ -25,6 +28,9 @@ const getDesignTokens = (mode) => ({
               background:{
                 default:"#001E3C",
                 paper:"#001E3C",
+              },
+              primary:{
+                main:"#17324D"
               }
             }),
       },

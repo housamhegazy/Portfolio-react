@@ -32,7 +32,7 @@ export default function Root() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box>
-        <AppBarr {...{ drawerWidth, handleDrawerToggle }} />
+        <AppBarr {...{ drawerWidth, handleDrawerToggle,theme }} />
         <Drawerr
           {...{
             drawerWidth,
@@ -54,7 +54,7 @@ export default function Root() {
         >
           <Outlet />
         </Box>
-        <Footer {...{ drawerWidth }} />
+        <Footer {...{ drawerWidth,theme }} />
       </Box>
     </ThemeProvider>
   );

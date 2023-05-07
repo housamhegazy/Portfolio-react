@@ -13,13 +13,13 @@ import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import PersonIcon from "@mui/icons-material/Person";
-
+import { useLocation, useNavigate } from "react-router-dom";
 const items = [
   { name: "Home", icon: <HomeIcon />, path: "/" },
   { name: "About", icon: <PersonIcon />, path: "/about" },
   { name: "Skills", icon: <TaskAltIcon />, path: "/skills" },
-  { name: "My Work", icon: <VisibilityIcon />, path: "my-works" },
-  { name: "Contact", icon: <ContactMailIcon />, path: "/contsct" },
+  { name: "My Work", icon: <VisibilityIcon />, path: "mywork" },
+  { name: "Contact", icon: <ContactMailIcon />, path: "/contact" },
 ];
 function Drawerr({
   drawerWidth,
@@ -29,6 +29,8 @@ function Drawerr({
   darkmoodFunc,
   theme,
 }) {
+  const location = useLocation();
+  const navigate = useNavigate();
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -91,18 +93,32 @@ function Drawerr({
       <Divider />
       <List>
         {items.map((item, index) => (
-          <ListItem key={index} disablePadding>
+          <ListItem className="list-item" key={index} disablePadding>
             <ListItemButton
               onClick={() => {
+                navigate(item.path);
                 setMobileOpen(false);
               }}
+              sx={{
+                "&:hover": {
+                  background: theme.palette.primary.main,
+                },
+                transition:".4s",
+                background: `${
+                  location.pathname === item.path
+                    ? theme.palette.primary.main
+                    : ""
+                }`,
+                color: location.pathname === item.path ? "white" : "",
+              }}
             >
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText
-                primary={item.name}
-                className="icon-name"
-                
-              />
+              <ListItemIcon
+              className="icon"
+                sx={{color: location.pathname === item.path ? "white" : "",}}
+              >
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.name} className="icon-name" />
             </ListItemButton>
           </ListItem>
         ))}
