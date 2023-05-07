@@ -60,7 +60,7 @@ export const projects = [
   {
     imgURL: [`${trainer}`],
     name: "X-Gym Template",
-    id: 4,
+    id: 5,
     details: "responsive Gym Website to show training machines and trainers ",
     skills: "React,Tailwind,Css3",
   },

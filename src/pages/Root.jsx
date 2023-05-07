@@ -43,7 +43,7 @@ export default function Root() {
             theme,
           }}
         />
-        <Box
+        <Box component='section'
           sx={{
             width: { xs: "100%", sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },

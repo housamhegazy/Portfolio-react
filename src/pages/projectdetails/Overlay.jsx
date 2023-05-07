@@ -9,6 +9,7 @@ export default function Overlay({project,setisOpen,img}) {
     sx={{
       position: "fixed",
       top: 0,
+      left:0,
       width: "100%",
       margin:0,
       height: "100%",
@@ -27,11 +28,12 @@ export default function Overlay({project,setisOpen,img}) {
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
         <React.Fragment>
           <TransformComponent>
-            <Box width={"50%"} minHeight={'90vh'} sx={{mx:"auto"}}>
+            <Box width={"50%"} minHeight={'90vh'} sx={{mx:"auto",cursor:"pointer"}}>
               <img
                 style={{ width: "100%" }}
                 src={img}
                 alt="img"
+                
               />
             </Box>
           </TransformComponent>

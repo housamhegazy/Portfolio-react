@@ -19,7 +19,7 @@ export default function ProjectDetails() {
         <Box component="h3" sx={{color:"yellow"}}>skills: {project.skills}</Box>
       </CommonSection>
       <Box
-        sx={{ width: "100%", overflow: "auto", mb: "100px",background:"#35886da3" }}
+        sx={{ width: "100%", overflow: "auto",background:"#35886da3",lineHeight:"100%"}}
       >
         <Stack
           direction={"row"}
@@ -30,13 +30,14 @@ export default function ProjectDetails() {
             py: "10px",
             alignItems: "center",
             justifyContent: "center",
+            minHeight:'350px'
           }}
         >
           {project.imgURL.map((url, index) => {
             return (
               <Box
                 key={index}
-                sx={{ width: "200px", height: "300px", overflow: "hidden" ,}}
+                sx={{ width: "200px", overflow: "hidden" ,maxHeight:"200px"}}
               >
                 <img
                   style={{ width: "100%", cursor: "pointer",objectFit:"cover" }}
