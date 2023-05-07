@@ -18,7 +18,7 @@ const items = [
   { name: "Home", icon: <HomeIcon />, path: "/" },
   { name: "About", icon: <PersonIcon />, path: "/about" },
   { name: "Skills", icon: <TaskAltIcon />, path: "/skills" },
-  { name: "My Work", icon: <VisibilityIcon />, path: "/mywork" },
+  { name: "My Works", icon: <VisibilityIcon />, path: "/mywork" },
   { name: "Contact", icon: <ContactMailIcon />, path: "/contact" },
 ];
 function Drawerr({
@@ -114,7 +114,7 @@ function Drawerr({
             >
               <ListItemIcon
               className="icon"
-                sx={{color: location.pathname === item.path ? "white" : "",}}
+                sx={{color: location.pathname === item.path ? "white" : "",minWidth:"40px"}}
               >
                 {item.icon}
               </ListItemIcon>

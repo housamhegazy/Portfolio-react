@@ -11,6 +11,7 @@ import Error404 from 'pages/Error404';
 import MyWorks from 'pages/myWorks';
 import Skills from 'pages/skills/Skills';
 import Contact from 'pages/contact/Contact';
+import ProjectDetails from 'pages/projectdetails';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path='/mywork' element={<MyWorks />} />
       <Route path='/skills' element={<Skills />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/mywork/productdetails/:id' element={<ProjectDetails />} />
       <Route path='*' element={<Error404 />} />
       {/* ... etc. */}
     </Route>
