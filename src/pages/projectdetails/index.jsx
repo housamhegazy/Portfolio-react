@@ -12,7 +12,7 @@ export default function ProjectDetails() {
   return (
     <Box>
       <Box
-        sx={{ width: "100%", overflow: "auto", my: "100px", background: "red" }}
+        sx={{ width: "100%", overflow: "auto", my: "100px",background:"#35886da3" }}
       >
         <Stack
           direction={"row"}
