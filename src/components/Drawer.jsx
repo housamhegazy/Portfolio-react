@@ -18,7 +18,7 @@ const items = [
   { name: "Home", icon: <HomeIcon />, path: "/" },
   { name: "About", icon: <PersonIcon />, path: "/about" },
   { name: "Skills", icon: <TaskAltIcon />, path: "/skills" },
-  { name: "My Work", icon: <VisibilityIcon />, path: "mywork" },
+  { name: "My Work", icon: <VisibilityIcon />, path: "/mywork" },
   { name: "Contact", icon: <ContactMailIcon />, path: "/contact" },
 ];
 function Drawerr({
