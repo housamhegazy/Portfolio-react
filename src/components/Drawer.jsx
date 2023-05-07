@@ -114,7 +114,7 @@ function Drawerr({
             >
               <ListItemIcon
               className="icon"
-                sx={{color: location.pathname === item.path ? "white" : "",minWidth:"40px"}}
+                sx={{color: location.pathname === item.path ? "white" :  "",minWidth:"40px"}}
               >
                 {item.icon}
               </ListItemIcon>

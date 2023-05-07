@@ -7,14 +7,16 @@ export default function Footer({ drawerWidth,theme }) {
         width: { xs: "100%", sm: `calc(100% - ${drawerWidth}px)` },
         ml: { sm: `${drawerWidth}px` },
         background:theme.palette.primary.main,
-        color:"white"
+        color:"white",
+        py:4
       }}
     >
-      <Divider />
+
       <Stack sx={{justifyContent:"center",alignItems:"center",px:"10px"}}>
       <Typography>developed by housam hegazy</Typography>
       <Typography>Copyright Reserved @ {new Date().getFullYear()}</Typography>
       </Stack>
+      <Divider />
     </Box>
   );
 }

@@ -1,8 +1,9 @@
-import { Box, Button, IconButton, Stack } from "@mui/material";
+import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { projects } from "assest/data";
 import { useState } from "react";
 import Overlay from "./Overlay";
+import CommonSection from "components/CommonSection";
 
 export default function ProjectDetails() {
   const param = useParams();
@@ -10,9 +11,15 @@ export default function ProjectDetails() {
   const [isOpen, setisOpen] = useState(false);
   const [img,setimg]=useState(null)
   return (
+
     <Box>
+      <CommonSection >
+        <Box component={'h2'}>{project.name}</Box>
+        <Typography>{project.details}</Typography>
+        <Box component="h3" sx={{color:"yellow"}}>skills: {project.skills}</Box>
+      </CommonSection>
       <Box
-        sx={{ width: "100%", overflow: "auto", my: "100px",background:"#35886da3" }}
+        sx={{ width: "100%", overflow: "auto", mb: "100px",background:"#35886da3" }}
       >
         <Stack
           direction={"row"}

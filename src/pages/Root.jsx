@@ -48,7 +48,7 @@ export default function Root() {
             width: { xs: "100%", sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
             // px:2,
-            py:1,
+            
             minHeight:`calc(100vh - 112px)`
           }}
         >
