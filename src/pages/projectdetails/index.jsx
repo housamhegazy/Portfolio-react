@@ -8,6 +8,7 @@ export default function ProjectDetails() {
   const param = useParams();
   const project = projects.find((item) => item.id === Number(param.id));
   const [isOpen, setisOpen] = useState(false);
+  const [img,setimg]=useState(null)
   return (
     <Box>
       <Box
@@ -28,14 +29,15 @@ export default function ProjectDetails() {
             return (
               <Box
                 key={index}
-                sx={{ width: "200px", height: "300px", overflow: "hidden" }}
+                sx={{ width: "200px", height: "300px", overflow: "hidden" ,}}
               >
                 <img
-                  style={{ width: "100%", cursor: "pointer" }}
+                  style={{ width: "100%", cursor: "pointer",objectFit:"cover" }}
                   src={url}
                   alt="img"
-                  onClick={() => {
+                  onClick={(e) => {
                     setisOpen(true);
+                    setimg(e.currentTarget.src)
                   }}
                 />
               </Box>
@@ -44,7 +46,7 @@ export default function ProjectDetails() {
         </Stack>
       </Box>
       {/* overlay */}
-      {isOpen && <Overlay {...{ project, setisOpen }} />}
+      {isOpen && <Overlay {...{ project, setisOpen ,img}} />}
     </Box>
   );
 }

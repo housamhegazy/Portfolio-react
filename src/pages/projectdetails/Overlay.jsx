@@ -3,7 +3,7 @@ import { Box, Button, IconButton } from '@mui/material'
 import React from 'react'
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
-export default function Overlay({project,setisOpen}) {
+export default function Overlay({project,setisOpen,img}) {
   return (
     <Box
     sx={{
@@ -16,7 +16,7 @@ export default function Overlay({project,setisOpen}) {
       flexDirection: "column",
       alignItems: "center",
       background: "#131617e0",
-      padding:0
+      padding:0,
     }}
   >
     <TransformWrapper
@@ -27,10 +27,10 @@ export default function Overlay({project,setisOpen}) {
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
         <React.Fragment>
           <TransformComponent>
-            <Box width={"50%"}sx={{mx:"auto"}}>
+            <Box width={"50%"} minHeight={'90vh'} sx={{mx:"auto"}}>
               <img
                 style={{ width: "100%" }}
-                src={project.imgURL}
+                src={img}
                 alt="img"
               />
             </Box>
