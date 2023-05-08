@@ -7,13 +7,15 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { Switch, styled } from "@mui/material";
+import { Switch, styled, IconButton } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import PersonIcon from "@mui/icons-material/Person";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import { WhatsApp } from "@mui/icons-material";
 const items = [
   { name: "Home", icon: <HomeIcon />, path: "/" },
   { name: "About", icon: <PersonIcon />, path: "/about" },
@@ -103,7 +105,7 @@ function Drawerr({
                 "&:hover": {
                   background: theme.palette.primary.main,
                 },
-                transition:".4s",
+                transition: ".4s",
                 background: `${
                   location.pathname === item.path
                     ? theme.palette.primary.main
@@ -113,8 +115,11 @@ function Drawerr({
               }}
             >
               <ListItemIcon
-              className="icon"
-                sx={{color: location.pathname === item.path ? "white" :  "",minWidth:"40px"}}
+                className="icon"
+                sx={{
+                  color: location.pathname === item.path ? "white" : "",
+                  minWidth: "40px",
+                }}
               >
                 {item.icon}
               </ListItemIcon>
@@ -124,6 +129,18 @@ function Drawerr({
         ))}
       </List>
       <Divider />
+      <Box>
+        <a href="https://www.facebook.com/housam.hegazy1" target="_blank" rel="noreferrer">
+          <IconButton>
+            <FacebookIcon />
+          </IconButton>
+        </a>
+        <a href=" https://wa.me/558412127" target="_blank" rel="noreferrer">
+          <IconButton>
+            <WhatsApp />
+          </IconButton>
+        </a>
+      </Box>
     </div>
   );
 
