@@ -1,7 +1,63 @@
-import React from 'react'
+import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
+import React from "react";
+import html from "../../assest/images/html.png";
+import css3 from "../../assest/images/css-3.png";
+import react from "../../assest/images/React.png";
+import bootstrap from "../../assest/images/bootstrap.png";
+import github from "../../assest/images/github.png";
+import firebase from "../../assest/images/firebase.png";
+import CommonSection from "components/CommonSection";
 
+const skills = [
+  { img: `${html}`, name: "HTML" },
+  { img: `${css3}`, name: "CSS3" },
+  { img: `${react}`, name: "React" },
+  { img: `${github}`, name: "Github" },
+  { img: `${firebase}`, name: "Firebase" },
+];
 export default function Skills() {
+  const theme = useTheme();
   return (
-    <div>Skills</div>
-  )
+    <Box >
+      <CommonSection >
+        <Typography variant='h5' sx={{textAlign:"center"}}>What I do</Typography>
+        <Typography variant='body1' sx={{textAlign:"center",py:"10px"}}>iam Front End Web Developer , using this languages i can build a responsive web applications </Typography>
+      </CommonSection>
+      <Stack
+        direction={"row"}
+        sx={{
+          gap: "20px",
+          justifyContent: "center",
+          alignItems: "center",
+          flexWrap: "wrap",
+          width:{xs:"100%",sm:"80%",md:"70%"},
+          mx:"auto",
+          my:"30px"
+        }}
+      >
+        {skills.map((item) => {
+          return (
+            <Paper
+              sx={{
+                background: theme.palette.primary.main,
+                padding: "10px",
+                width: "120px",
+                height: "140px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow:theme.palette.mode === 'light'?" -7px 11px 5px 1px gray":"1px 0px 6px 4px #01579b"
+              }}
+            >
+              <img src={item.img} alt="html" width={"50px"} style={{}} />
+              <Typography sx={{fs:"15px"}} color="white" py={2} variant="h6">
+                {item.name}
+              </Typography>
+            </Paper>
+          );
+        })}
+      </Stack>
+    </Box>
+  );
 }
