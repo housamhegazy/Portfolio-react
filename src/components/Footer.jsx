@@ -8,7 +8,7 @@ export default function Footer({ drawerWidth,theme }) {
         ml: { sm: `${drawerWidth}px` },
         background:theme.palette.primary.main,
         color:"white",
-        py:4
+        py:2
       }}
     >
 

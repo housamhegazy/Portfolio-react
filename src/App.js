@@ -10,7 +10,7 @@ import {
 import Error404 from 'pages/Error404';
 import MyWorks from 'pages/myWorks';
 import Skills from 'pages/skills/Skills';
-import Contact from 'pages/contact/Contact';
+import Contact from 'pages/contact';
 import ProjectDetails from 'pages/projectdetails';
 
 const router = createBrowserRouter(
