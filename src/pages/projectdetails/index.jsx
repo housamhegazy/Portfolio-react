@@ -19,7 +19,7 @@ export default function ProjectDetails() {
         <Box component="h3" sx={{color:"yellow"}}>skills: {project.skills}</Box>
       </CommonSection>
       <Box
-        sx={{ width: "100%", overflow: "auto",background:"#35886da3",lineHeight:"100%"}}
+        sx={{ width: "100%", overflow: "auto",px:"20px",lineHeight:"100%"}}
       >
         <Stack
           direction={"row"}
@@ -37,7 +37,7 @@ export default function ProjectDetails() {
             return (
               <Box
                 key={index}
-                sx={{ width: "200px", overflow: "hidden" ,maxHeight:"200px"}}
+                sx={{ width: "200px", overflow: "hidden" ,maxHeight:"400px"}}
               >
                 <img
                   style={{ width: "100%", cursor: "pointer",objectFit:"cover" }}

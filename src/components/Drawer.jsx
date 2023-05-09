@@ -13,9 +13,15 @@ import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import PersonIcon from "@mui/icons-material/Person";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import { WhatsApp } from "@mui/icons-material";
+import {  useLocation, useNavigate } from "react-router-dom";
+
+import { Facebook,GitHub, Instagram, WhatsApp } from "@mui/icons-material";
+const socialMedia = [
+  {icon:<GitHub/>,path:"https://github.com/housamhegazy"},
+  {icon:<Instagram/>,path:"https://instagram.com/housamhegazy2?igshid=ZGUzMzM3NWJiOQ=="},
+  {icon:<WhatsApp/>,path:"https://wa.me/558412127"},
+  {icon:<Facebook/>,path:"https://www.facebook.com/housam.hegazy1"},
+]
 const items = [
   { name: "Home", icon: <HomeIcon />, path: "/" },
   { name: "About", icon: <PersonIcon />, path: "/about" },
@@ -130,16 +136,17 @@ function Drawerr({
       </List>
       <Divider />
       <Box>
-        <a href="https://www.facebook.com/housam.hegazy1" target="_blank" rel="noreferrer">
+        {socialMedia.map((item,index)=>{
+          return(
+            <a key={index} href={item.path} target="_blank" rel="noreferrer">
           <IconButton>
-            <FacebookIcon />
+            {item.icon}
+            {/* <Instagram color={`${theme.palette.mode === 'light'&&'primary'}`}/> */}
           </IconButton>
         </a>
-        <a href=" https://wa.me/558412127" target="_blank" rel="noreferrer">
-          <IconButton>
-            <WhatsApp />
-          </IconButton>
-        </a>
+          )
+        })}
+        
       </Box>
     </div>
   );
