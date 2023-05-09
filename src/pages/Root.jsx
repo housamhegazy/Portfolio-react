@@ -32,7 +32,7 @@ export default function Root() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box>
-        <AppBarr {...{ drawerWidth, handleDrawerToggle,theme }} />
+        <AppBarr {...{ drawerWidth, handleDrawerToggle,theme,darkmoodFunc }} />
         <Drawerr
           {...{
             drawerWidth,
@@ -47,8 +47,6 @@ export default function Root() {
           sx={{
             width: { xs: "100%", sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
-            // px:2,
-            
             minHeight:`calc(100vh - 112px)`
           }}
         >

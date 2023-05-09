@@ -6,7 +6,7 @@ const customstyle = {
 export default function CommonSection({children}) {
   return (
     <Stack sx={customstyle}>
-        <Box color={"white"}sx={{background:"#084b6e94",p:2,borderRadius:"5px",width:"100%"}}>
+        <Box className={`header-font`} color={"white"}sx={{background:"#084b6e94",p:2,borderRadius:"5px",width:"100%"}} >
             {children}
         </Box>
     </Stack>

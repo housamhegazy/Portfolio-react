@@ -32,7 +32,7 @@ export default function Contact() {
         component="form"
         onSubmit={handleSubmit}
         sx={{
-          width: "50%",
+          width: {xs:"90%",md:"70%"},
           mx: "auto",
           mt: "20px",
           gap: "10px",
