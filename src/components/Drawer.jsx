@@ -1,3 +1,5 @@
+// @ts-ignore
+// @ts-ignore
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -7,21 +9,16 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { Switch, styled, IconButton } from "@mui/material";
+import { Switch, styled, IconButton, Stack } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import PersonIcon from "@mui/icons-material/Person";
-import {  useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-import { Facebook,GitHub, Instagram, WhatsApp } from "@mui/icons-material";
-const socialMedia = [
-  {icon:<GitHub/>,path:"https://github.com/housamhegazy"},
-  {icon:<Instagram/>,path:"https://instagram.com/housamhegazy2?igshid=ZGUzMzM3NWJiOQ=="},
-  {icon:<WhatsApp/>,path:"https://wa.me/558412127"},
-  {icon:<Facebook/>,path:"https://www.facebook.com/housam.hegazy1"},
-]
+import { Facebook, GitHub, Instagram, WhatsApp } from "@mui/icons-material";
+
 const items = [
   { name: "Home", icon: <HomeIcon />, path: "/" },
   { name: "About", icon: <PersonIcon />, path: "/about" },
@@ -39,6 +36,36 @@ function Drawerr({
 }) {
   const location = useLocation();
   const navigate = useNavigate();
+  const socialMedia = [
+    {
+      // @ts-ignore
+      icon: <GitHub color={`${theme.palette.mode === "light" && "primary"}`} />,
+      path: "https://github.com/housamhegazy",
+    },
+    {
+      icon: (
+        // @ts-ignore
+        <Instagram color={`${theme.palette.mode === "light" && "primary"}`} />
+      ),
+      path: "https://instagram.com/housamhegazy2?igshid=ZGUzMzM3NWJiOQ==",
+    },
+
+    {
+      icon: (
+        // @ts-ignore
+        <WhatsApp color={`${theme.palette.mode === "light" && "primary"}`} />
+      ),
+      path: "https://wa.me/558412127",
+    },
+
+    {
+      icon: (
+        // @ts-ignore
+        <Facebook color={`${theme.palette.mode === "light" && "primary"}`} />
+      ),
+      path: "https://www.facebook.com/housam.hegazy1",
+    },
+  ];
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -135,19 +162,33 @@ function Drawerr({
         ))}
       </List>
       <Divider />
-      <Box>
-        {socialMedia.map((item,index)=>{
-          return(
-            <a key={index} href={item.path} target="_blank" rel="noreferrer">
-          <IconButton>
-            {item.icon}
-            {/* <Instagram color={`${theme.palette.mode === 'light'&&'primary'}`}/> */}
-          </IconButton>
-        </a>
-          )
+      <Stack
+        direction="row"
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          width: "70%",
+          mx: "auto",
+          flexWrap: "wrap",
+          mt:"60px"
+        }}
+      >
+        {socialMedia.map((item, index) => {
+          return (
+            <Box key={index} sx={{ width: "50%" }}>
+              <a href={item.path} target="_blank" rel="noreferrer">
+                <IconButton
+                  sx={{
+                    color: `${theme.palette.mode === "light" && "primary"}`,
+                  }}
+                >
+                  {item.icon}
+                </IconButton>
+              </a>
+            </Box>
+          );
         })}
-        
-      </Box>
+      </Stack>
     </div>
   );
 
