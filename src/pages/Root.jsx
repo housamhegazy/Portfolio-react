@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import { Box } from "@mui/material";
@@ -28,6 +28,7 @@ export default function Root() {
     );
     setmode(theme.palette.mode === "light" ? "dark" : "light");
   };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

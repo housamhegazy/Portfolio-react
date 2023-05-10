@@ -23,6 +23,7 @@ export default function Home() {
           background: "#141b2ded",
           color: "white",
           // minHeight: `calc(100vh - 112px)`,
+          borderRadius:"10px"
         }}
       >
         <li>Hi there, My name is Housam Hegazy.</li>

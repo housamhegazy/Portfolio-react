@@ -92,13 +92,13 @@ function Drawerr({
                     ? theme.palette.primary.main
                     : ""
                 }`,
-                color: location.pathname === item.path ? "white" : "",
+                color: location.pathname === item.path ? "white" : theme.palette.primary.main,
               }}
             >
               <ListItemIcon
                 className="icon"
                 sx={{
-                  color: location.pathname === item.path ? "white" : "",
+                  color: location.pathname === item.path ? "white" : theme.palette.primary.main,
                   minWidth: "40px",
                 }}
               >
@@ -127,7 +127,7 @@ function Drawerr({
               <a href={item.path} target="_blank" rel="noreferrer">
                 <IconButton
                   sx={{
-                    color: `${theme.palette.mode === "light" && "primary"}`,
+                    color: `${theme.palette.mode === "light" && theme.palette.primary.main}`,
                   }}
                 >
                   {item.icon}
