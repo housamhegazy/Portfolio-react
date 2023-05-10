@@ -31,7 +31,7 @@ function Drawerr({
   handleDrawerToggle,
   mobileOpen,
   setMobileOpen,
-  darkmoodFunc,
+  setloading,
   theme,
 }) {
   const location = useLocation();
@@ -81,6 +81,7 @@ function Drawerr({
               onClick={() => {
                 navigate(item.path);
                 setMobileOpen(false);
+                setloading(true)
               }}
               sx={{
                 "&:hover": {

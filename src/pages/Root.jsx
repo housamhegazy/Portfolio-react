@@ -71,6 +71,7 @@ export default function Root() {
             setMobileOpen,
             darkmoodFunc,
             theme,
+            setloading
           }}
         />
         <Box
