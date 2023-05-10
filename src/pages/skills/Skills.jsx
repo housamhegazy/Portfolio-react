@@ -35,9 +35,10 @@ export default function Skills() {
           my:"30px"
         }}
       >
-        {skills.map((item) => {
+        {skills.map((item,index) => {
           return (
             <Paper
+            key={index}
               sx={{
                 background: theme.palette.primary.main,
                 padding: "10px",
