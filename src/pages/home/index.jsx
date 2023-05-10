@@ -1,29 +1,29 @@
 import { Box, Stack, useTheme } from "@mui/material";
-// import homelogo from "../../assest/images/homelogo.jpg";
+import homelogo from "../../assest/images/homelogo.jpg";
 import home from "../../assest/images/home.jpg";
 export default function Home() {
-  const theme = useTheme()
+  const theme = useTheme();
   return (
     <Stack
       sx={{
-        background: theme.palette.mode === 'light' && `url(${home})` ,
+        background: theme.palette.mode === "light" && `url(${home})`,
         backgroundSize: "cover",
         minHeight: `calc(100vh - 112px)`,
-        padding:"10px",
-        justifyContent:"center",
-        alignItems:"center"
+        padding: "10px",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      <Box component ='ul'
+      <Box
+        component="ul"
         sx={{
-          width:{xs:"100%",md:"80%"},
+          width: { xs: "100%", md: "80%" },
           lineHeight: "2",
-          fontSize: {xs:"14px",md:"20px"},
-          padding: '26px',
+          fontSize: { xs: "14px", md: "20px" },
+          padding: "26px",
           background: "#141b2ded",
           color: "white",
-          // minHeight: `calc(100vh - 112px)`,
-          borderRadius:"10px"
+          borderRadius: "10px",
         }}
       >
         <li>Hi there, My name is Housam Hegazy.</li>
@@ -51,9 +51,21 @@ export default function Home() {
           service quality to accomplish customer satisfactio
         </li>
       </Box>
-      {/* <Box sx={{m:4,borderRadius:"10px",overflow:"hidden"}}>
-        <img src={`${homelogo}`} alt='homelogo' width="100%"/>
-      </Box> */}
+
+      <a
+        style={{
+          background: theme.palette.mode==='light'?theme.palette.primary.main:"white",
+          color: theme.palette.mode==='light'?"white":theme.palette.primary.main,
+          borderRadius: "10px",
+          textDecoration: "none",
+          padding: "5px 10px",
+          marginTop: "20px",
+        }}
+        href={`${homelogo}`}
+        download="cv"
+      >
+        Download Cv
+      </a>
     </Stack>
   );
 }
