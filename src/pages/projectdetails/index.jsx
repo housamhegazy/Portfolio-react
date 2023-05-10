@@ -30,7 +30,7 @@ export default function ProjectDetails() {
             py: "10px",
             alignItems: "center",
             justifyContent: "center",
-            minHeight:'350px'
+            minHeight:'100%'
           }}
         >
           {project.imgURL.map((url, index) => {
