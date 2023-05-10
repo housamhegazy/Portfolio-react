@@ -16,28 +16,7 @@ import { RingLoader } from "react-spinners";
 export default function MyWorks() {
   const theme = useTheme();
   const navigate = useNavigate();
-  const [loading,setloading] = useState(false)
-  const loader = ( <Box sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-    <RingLoader
-    color={theme.palette.primary.main}
-    // loading={loading}
-    // cssOverride={override}
-    size={150}
-    aria-label="Loading Spinner"
-    data-testid="loader"
-  />
-  </Box>)
-  useEffect(()=>{
-    setloading(true)
-    setInterval(()=>{
-      setloading(false)
-    },1000)
-  },[])
-  if(loading){
-    return(
-      loader
-    )
-  }
+
   return (
     <>
       <CommonSection>

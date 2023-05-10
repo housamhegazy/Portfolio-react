@@ -6,6 +6,7 @@ import Drawerr from "../components/Drawer";
 import AppBarr from "../components/Appbar";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import getDesignTokens from "../style/MuiTheme";
+import { RingLoader } from "react-spinners";
 
 const drawerWidth = 150;
 export default function Root() {
@@ -28,12 +29,40 @@ export default function Root() {
     );
     setmode(theme.palette.mode === "light" ? "dark" : "light");
   };
+  const [loading, setloading] = useState(false);
+  const loader = (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "80vh",
+      }}
+    >
+      <RingLoader
+        color={theme.palette.mode === 'light'?theme.palette.primary.main:"white"}
+        // loading={loading}
+        // cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    </Box>
+  );
+  useEffect(() => {
+    setloading(true);
+    setInterval(() => {
+      setloading(false);
+    }, 2000);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box>
-        <AppBarr {...{ drawerWidth, handleDrawerToggle,theme,darkmoodFunc }} />
+        <AppBarr
+          {...{ drawerWidth, handleDrawerToggle, theme, darkmoodFunc }}
+        />
         <Drawerr
           {...{
             drawerWidth,
@@ -44,16 +73,18 @@ export default function Root() {
             theme,
           }}
         />
-        <Box component='section'
+        <Box
+          component="section"
           sx={{
             width: { xs: "100%", sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
-            minHeight:`calc(100vh - 112px)`
+            minHeight: `calc(100vh - 112px)`,
+            height: "100%",
           }}
         >
-          <Outlet />
+          {loading ? loader : <Outlet />}
         </Box>
-        <Footer {...{ drawerWidth,theme }} />
+        <Footer {...{ drawerWidth, theme }} />
       </Box>
     </ThemeProvider>
   );
