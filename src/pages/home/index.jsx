@@ -1,6 +1,7 @@
-import { Box, Stack, useTheme } from "@mui/material";
+import { Box, Button, Stack, useTheme } from "@mui/material";
 import homelogo from "../../assest/images/homelogo.jpg";
 import home from "../../assest/images/home.jpg";
+import { Link } from "react-router-dom";
 export default function Home() {
   const theme = useTheme();
   return (
@@ -27,9 +28,7 @@ export default function Home() {
         }}
       >
         <li>Hi there, My name is Housam Hegazy.</li>
-        <li>
-        Bachelor of Science
-        </li>
+        <li>Bachelor of Science - 2015</li>
         <li>
           I’m a Self-motivated Front-end Web Developer with a strong ambition to
           learn and discover the newest cutting-edge methodologies to build
@@ -55,20 +54,27 @@ export default function Home() {
         </li>
       </Box>
 
-      <a
-        style={{
-          background: theme.palette.mode==='light'?theme.palette.primary.main:"white",
-          color: theme.palette.mode==='light'?"white":theme.palette.primary.main,
-          borderRadius: "10px",
-          textDecoration: "none",
-          padding: "5px 10px",
+      <Stack
+        direction="row"
+        sx={{
           marginTop: "20px",
+          width: "100%",
+          justifyContent: "space-around",
+          alignItems: "center",
         }}
-        href={`${homelogo}`}
-        download="cv"
       >
-        Download Cv
-      </a>
+        <a href={`${homelogo}`} download="cv">
+          <Button variant="contained" sx={{ textTransform: "capitalize" }}>
+            Download Cv
+          </Button>
+        </a>
+
+        <Link to={"./mywork"}>
+          <Button variant="contained" sx={{ textTransform: "capitalize" }}>
+            see my works
+          </Button>
+        </Link>
+      </Stack>
     </Stack>
   );
 }

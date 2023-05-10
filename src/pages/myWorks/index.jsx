@@ -1,6 +1,5 @@
 import { projects } from "assest/data";
 import {
-  Box,
   Card,
   CardContent,
   CardMedia,
@@ -11,8 +10,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import CommonSection from "components/CommonSection";
-import { useEffect, useState } from "react";
-import { RingLoader } from "react-spinners";
 export default function MyWorks() {
   const theme = useTheme();
   const navigate = useNavigate();

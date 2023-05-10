@@ -17,3 +17,7 @@
 .header-font > h5,h2{
   font-family: 'Lobster', cursive;
 }
+.map-container {
+  height: 100%;
+  width: 100%;
+}
