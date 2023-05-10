@@ -14,9 +14,9 @@ export default function ProjectDetails() {
 
     <Box>
       <CommonSection >
-        <Box component={'h2'}>{project.name}</Box>
-        <Typography>{project.details}</Typography>
-        <Box component="h3" sx={{color:"yellow"}}>skills: {project.skills}</Box>
+        <Box component={'h2'} sx={{fontSize:{xs:"16px",md:"20px"} }}>{project.name}</Box>
+        <Typography sx={{fontSize:{xs:"12px",md:"14px"} }}>{project.details}</Typography>
+        <Box component="h3" sx={{color:"yellow",fontWeight:"400",fontSize:{xs:"12px",md:"14px"}}}>skills: {project.skills}</Box>
       </CommonSection>
       <Box
         sx={{ width: "100%", overflow: "auto",px:"20px",lineHeight:"100%"}}

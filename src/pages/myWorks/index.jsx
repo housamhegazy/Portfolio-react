@@ -20,18 +20,19 @@ export default function MyWorks() {
   return (
     <>
       <CommonSection>
-        <Typography variant="h5" sx={{ textAlign: "center" }}>
+        <Typography variant="h5" sx={{ textAlign: "center" ,fontSize:{xs:"16px",md:"20px"}}}>
           All Projects are Responsive at all Screans{" "}
         </Typography>
       </CommonSection>
       <Stack
         direction={"row"}
-        gap={4}
+        
         sx={{
           flexWrap: "wrap",
           justifyContent: "center",
           alignItems: "center",
           my: 5,
+          gap:{xs:2,md:4}
         }}
       >
         {projects.map((project, index) => {
@@ -49,7 +50,7 @@ export default function MyWorks() {
               >
                 <CardMedia
                   component="img"
-                  height="194"
+                  height="150"
                   image={`${project.imgURL[0]}`}
                   // alt="Paella dish"
                   sx={{ cursor: "pointer" }}
@@ -60,9 +61,10 @@ export default function MyWorks() {
                 <CardContent>
                   <Typography
                     sx={{
-                      maxHeight: "80px",
+                      maxHeight: "60px",
                       overflow: "hidden",
                       height: "100px",
+                      fontSize:{xs:"12px",md:"14px"}
                     }}
                     variant="body1"
                     color="text.secondary"
