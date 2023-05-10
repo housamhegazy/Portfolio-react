@@ -28,9 +28,12 @@ export default function Home() {
       >
         <li>Hi there, My name is Housam Hegazy.</li>
         <li>
+        Bachelor of Science
+        </li>
+        <li>
           I’m a Self-motivated Front-end Web Developer with a strong ambition to
           learn and discover the newest cutting-edge methodologies to build
-          high-performance websites.n
+          high-performance websites.
         </li>
         <li>
           {" "}
@@ -48,7 +51,7 @@ export default function Home() {
         </li>
         <li>
           Excellent communication skills with clients to establish the best
-          service quality to accomplish customer satisfactio
+          service quality to accomplish customer satisfaction
         </li>
       </Box>
 
