@@ -3,7 +3,7 @@ import { Box, Button, IconButton } from '@mui/material'
 import React from 'react'
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 
-export default function Overlay({project,setisOpen,img}) {
+export default function Overlay({setisOpen,img}) {
   return (
     <Box
     sx={{

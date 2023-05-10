@@ -8,7 +8,7 @@ export default function Home() {
       sx={{
         background: theme.palette.mode === "light" && `url(${home})`,
         backgroundSize: "cover",
-        minHeight: `calc(100vh - 112px)`,
+        minHeight: `calc(100vh - 147px)`,
         padding: "10px",
         justifyContent: "center",
         alignItems: "center",
@@ -19,7 +19,7 @@ export default function Home() {
         sx={{
           width: { xs: "100%", md: "80%" },
           lineHeight: "2",
-          fontSize: { xs: "14px", md: "20px" },
+          fontSize: { xs: "14px", md: "18px" },
           padding: "26px",
           background: "#141b2ded",
           color: "white",

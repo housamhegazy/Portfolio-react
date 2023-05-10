@@ -9,6 +9,7 @@ import getDesignTokens from "../style/MuiTheme";
 import { RingLoader } from "react-spinners";
 
 const drawerWidth = 150;
+
 export default function Root() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -36,7 +37,7 @@ export default function Root() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "80vh",
+        minHeight: `calc(100vh - 147px)`
       }}
     >
       <RingLoader
@@ -79,8 +80,7 @@ export default function Root() {
           sx={{
             width: { xs: "100%", sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
-            minHeight: `calc(100vh - 112px)`,
-            height: "100%",
+            minHeight: `calc(100vh - 147px)`,
           }}
         >
           {loading ? loader : <Outlet />}

@@ -3,7 +3,6 @@ import React from "react";
 import html from "../../assest/images/html.png";
 import css3 from "../../assest/images/css-3.png";
 import react from "../../assest/images/React.png";
-import bootstrap from "../../assest/images/bootstrap.png";
 import github from "../../assest/images/github.png";
 import firebase from "../../assest/images/firebase.png";
 import CommonSection from "components/CommonSection";
