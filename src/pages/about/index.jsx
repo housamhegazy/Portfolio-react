@@ -1,7 +1,7 @@
 // import React, { useMemo } from "react";
 // import { useLoadScript, GoogleMap, Marker } from "@react-google-maps/api";
 import { Box, useTheme } from "@mui/material";
-
+import { Helmet } from "react-helmet";
 export default function About() {
   const theme = useTheme();
   // const { isLoaded } = useLoadScript({
@@ -19,19 +19,24 @@ export default function About() {
         marginTop: "30px",
       }}
     >
+      <Helmet>
+        <title>H.Hegazy/About</title>
+        <meta name="description" content="about page" />
+      </Helmet>
       <ul style={{ listStyle: "none" }}>
-        <li style={{ marginTop: "15px",color:"white" }}>
-          <span style={{color:"yellow"}}>2015</span>{" - "} Graduated from Faculity of Science
+        <li style={{ marginTop: "15px", color: "white" }}>
+          <span style={{ color: "yellow" }}>2015</span>
+          {" - "} Graduated from Faculity of Science
         </li>
-        <li style={{ marginTop: "15px",color:"white" }}>
-          <span style={{color:"yellow"}}>2016-2018</span>{" - "}Worked as a data entry employee and government
-          services
+        <li style={{ marginTop: "15px", color: "white" }}>
+          <span style={{ color: "yellow" }}>2016-2018</span>
+          {" - "}Worked as a data entry employee and government services
         </li>
-        <li style={{ marginTop: "15px",color:"white" }}>
-          <span style={{color:"yellow"}}>2018-now</span>{" - "}Worked as Nutrition Specialist at Dr.Nutrition
-          Center in Saudi Arabia
+        <li style={{ marginTop: "15px", color: "white" }}>
+          <span style={{ color: "yellow" }}>2018-now</span>
+          {" - "}Worked as Nutrition Specialist at Dr.Nutrition Center in Saudi
+          Arabia
         </li>
-        
       </ul>
     </Box>
     //     <div style={{width:'80vw',height:"90vh",margin:"10px"}}>

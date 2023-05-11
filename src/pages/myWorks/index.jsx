@@ -10,12 +10,17 @@ import {
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import CommonSection from "components/CommonSection";
+import { Helmet } from "react-helmet";
 export default function MyWorks() {
   const theme = useTheme();
   const navigate = useNavigate();
 
   return (
     <>
+    <Helmet>
+        <title>H.Hegazy/My-Works</title>
+        <meta name="description" content="My-Works page" />
+      </Helmet>
       <CommonSection>
         <Typography variant="h5" sx={{ textAlign: "center" ,fontSize:{xs:"16px",md:"20px"}}}>
           All Projects are Responsive at all Screans{" "}

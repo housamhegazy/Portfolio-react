@@ -6,6 +6,7 @@ import react from "../../assest/images/React.png";
 import github from "../../assest/images/github.png";
 import firebase from "../../assest/images/firebase.png";
 import CommonSection from "components/CommonSection";
+import { Helmet } from "react-helmet";
 
 const skills = [
   { img: `${html}`, name: "HTML" },
@@ -18,6 +19,10 @@ export default function Skills() {
   const theme = useTheme();
   return (
     <Box>
+      <Helmet>
+        <title>H.Hegazy/Skills</title>
+        <meta name="description" content="Skills page" />
+      </Helmet>
       <CommonSection>
         <Typography variant="h5" sx={{ textAlign: "center" }}>
           What I do

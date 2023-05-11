@@ -2,6 +2,7 @@ import { Box, Button, Stack, useTheme } from "@mui/material";
 import homelogo from "../../assest/images/homelogo.jpg";
 import home from "../../assest/images/home.jpg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 export default function Home() {
   const theme = useTheme();
   return (
@@ -15,6 +16,10 @@ export default function Home() {
         alignItems: "center",
       }}
     >
+      <Helmet>
+        <title>H.Hegazy/Home</title>
+        <meta name="description" content="Home page" />
+      </Helmet>
       <Box
         component="ul"
         sx={{

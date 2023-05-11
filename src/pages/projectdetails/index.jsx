@@ -4,6 +4,7 @@ import { projects } from "assest/data";
 import { useState } from "react";
 import Overlay from "./Overlay";
 import CommonSection from "components/CommonSection";
+import { Helmet } from "react-helmet";
 
 export default function ProjectDetails() {
   const param = useParams();
@@ -13,6 +14,10 @@ export default function ProjectDetails() {
   return (
 
     <Box>
+      <Helmet>
+        <title>project details</title>
+        <meta name="description" content="project details page" />
+      </Helmet>
       <CommonSection >
         <Box component={'h2'} sx={{fontSize:{xs:"16px",md:"20px"} }}>{project.name}</Box>
         <Typography sx={{fontSize:{xs:"12px",md:"14px"} }}>{project.details}</Typography>
