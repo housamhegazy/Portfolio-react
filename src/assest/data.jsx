@@ -27,6 +27,7 @@ export const projects = [
     details:
       "responsive E-commerce website with cart ,product details,admin dashboard to add products ,users page ,login , signup page and checkout page",
     skills: "React,React-Bootstrape,Css3,Redux,firebase",
+    projectURL:"https://gleeful-torte-6d0000.netlify.app/"
   },
   {
     imgURL: [`${ecommerceRedux}`, `${ecommerceRedux2}`, `${ecommerceRedux3}`],
@@ -35,6 +36,7 @@ export const projects = [
     details:
       "responsive E-commerce website with cart ,product details,using redux to get products from Api",
     skills: "React,Mui,Redux",
+    projectURL:"https://magical-centaur-375ecd.netlify.app/"
   },
   {
     imgURL: [
@@ -48,6 +50,7 @@ export const projects = [
     details:
       "responsive E-commerce website with cart ,product details,using redux to get products from Api",
     skills: "React,Mui,Css3",
+    projectURL:"https://grand-biscuit-e4ce0f.netlify.app/"
   },
   {
     imgURL: [`${foodera}`],
@@ -56,6 +59,7 @@ export const projects = [
     details:
       "responsive Restaurant Website to show foods and price to customers ",
     skills: "React,Css3,tailwind",
+    projectURL:"https://heartfelt-longma-576f29.netlify.app/"
   },
   {
     imgURL: [`${trainer}`],
@@ -63,5 +67,6 @@ export const projects = [
     id: 5,
     details: "responsive Gym Website to show training machines and trainers ",
     skills: "React,Tailwind,Css3",
+    rojectURL:"https://gleeful-bavarois-0ded04.netlify.app/"
   },
 ];
