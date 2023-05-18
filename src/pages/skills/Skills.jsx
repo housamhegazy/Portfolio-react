@@ -5,13 +5,19 @@ import css3 from "../../assest/images/css-3.png";
 import react from "../../assest/images/React.png";
 import github from "../../assest/images/github.png";
 import firebase from "../../assest/images/firebase.png";
+import ts from "../../assest/images/ts.png";
+import redux from "../../assest/images/redux.png";
+import bootstrap from "../../assest/images/bootstrap.png";
+import tailwind from "../../assest/images/tailwind.png";
+import mui from "../../assest/images/mui.png";
+import js from "../../assest/images/js.png";
 import CommonSection from "components/CommonSection";
 
 const skills = [
   { img: `${html}`, name: "HTML" },
   { img: `${css3}`, name: "CSS3" },
-  { img: `${javascript}`, name: "Javascript" },
-  { img: `${typescript}`, name: "Typescript" },
+  { img: `${js}`, name: "Javascript" },
+  { img: `${ts}`, name: "Typescript" },
   { img: `${react}`, name: "React" },
   { img: `${github}`, name: "Github" },
   { img: `${firebase}`, name: "Firebase" },
