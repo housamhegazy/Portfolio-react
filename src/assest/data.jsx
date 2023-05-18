@@ -12,6 +12,12 @@ import ecommerceRedux3 from "./images/ecommerce-redux-03.png";
 import ecommerceRedux2 from "./images/ecommerce-redux-2.png";
 import foodera from "./images/foodera1.png";
 import trainer from "./images/trainer.png";
+import fbApp1 from './images/fbApp1.png'
+import fbApp2 from './images/fbApp2.png'
+import fbApp3 from './images/fbApp3.png'
+import fbApp4 from './images/fbApp4.png'
+import fbApp5 from './images/fbApp5.png'
+import fbApp6 from './images/fbApp6.png'
 
 export const projects = [
   {
@@ -68,5 +74,13 @@ export const projects = [
     details: "responsive Gym Website to show training machines and trainers ",
     skills: "React,Tailwind,Css3",
     rojectURL:"https://gleeful-bavarois-0ded04.netlify.app/"
+  },
+  {
+    imgURL: [`${fbApp1}`,`${fbApp2}`,`${fbApp3}`,`${fbApp4}`,`${fbApp5}`,`${fbApp6}`],
+    name: "Socila media App",
+    id: 6,
+    details: "responsive Social App ,add posts and comments ,profile page,singin page,signup page ",
+    skills: "React,Mui,Css3,Firebase",
+    rojectURL:"https://level4-mui.web.app/signup"
   },
 ];

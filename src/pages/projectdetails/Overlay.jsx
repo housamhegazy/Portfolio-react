@@ -28,7 +28,7 @@ export default function Overlay({setisOpen,img}) {
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
         <React.Fragment>
           <TransformComponent>
-            <Box width={"50%"} minHeight={'90vh'} sx={{mx:"auto",cursor:"pointer"}}>
+            <Box width={"100%"} minHeight={'90vh'} sx={{mx:"auto",cursor:"pointer"}}>
               <img
                 style={{ width: "100%" }}
                 src={img}
