@@ -37,7 +37,7 @@ export default function ProjectDetails() {
         <a
           style={{ display: "block", marginTop: "10px" }}
           href={`${project.projectURL}`}
-          target="__blanck"
+          target="_blank" rel="noreferrer"
         >
           {" "}
           <Button
