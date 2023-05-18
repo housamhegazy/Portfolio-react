@@ -1,5 +1,5 @@
 import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
-
+import { Helmet } from "react-helmet";
 import html from "../../assest/images/html.png";
 import css3 from "../../assest/images/css-3.png";
 import react from "../../assest/images/React.png";
