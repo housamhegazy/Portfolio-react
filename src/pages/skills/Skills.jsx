@@ -1,17 +1,12 @@
 import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
-import React from "react";
+
 import html from "../../assest/images/html.png";
 import css3 from "../../assest/images/css-3.png";
 import react from "../../assest/images/React.png";
 import github from "../../assest/images/github.png";
 import firebase from "../../assest/images/firebase.png";
 import CommonSection from "components/CommonSection";
-import typescript from '../../assest/images/ts.png'
-import javascript from '../../assest/images/js.png'
-import redux from '../../assest/images/redux.png'
-import bootstrap from '../../assest/images/bootstrap.png'
-import mui from '../../assest/images/mui.png'
-import tailwind from '../../assest/images/tailwind.png'
+
 const skills = [
   { img: `${html}`, name: "HTML" },
   { img: `${css3}`, name: "CSS3" },
@@ -29,6 +24,10 @@ export default function Skills() {
   const theme = useTheme();
   return (
     <Box>
+      <Helmet>
+        <title>H.Hegazy/Skills</title>
+        <meta name="description" content="Skills page" />
+      </Helmet>
       <CommonSection>
         <Typography variant="h5" sx={{ textAlign: "center" }}>
           What I do

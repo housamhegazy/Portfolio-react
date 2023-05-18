@@ -10,6 +10,7 @@ import CommonSection from "components/CommonSection";
 import React from "react";
 // @ts-ignore
 import { useForm, ValidationError } from "@formspree/react";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
   const theme = useTheme();
@@ -23,6 +24,10 @@ export default function Contact() {
   }
   return (
     <Box>
+      <Helmet>
+        <title>H.Hegazy/contact</title>
+        <meta name="description" content="contact page" />
+      </Helmet>
       <CommonSection>
         <Typography variant="h5" sx={{ textAlign: "center" }}>
           Contact Us
