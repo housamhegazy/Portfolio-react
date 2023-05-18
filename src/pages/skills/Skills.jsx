@@ -6,13 +6,24 @@ import react from "../../assest/images/React.png";
 import github from "../../assest/images/github.png";
 import firebase from "../../assest/images/firebase.png";
 import CommonSection from "components/CommonSection";
-
+import typescript from '../../assest/images/ts.png'
+import javascript from '../../assest/images/js.png'
+import redux from '../../assest/images/redux.png'
+import bootstrap from '../../assest/images/bootstrap.png'
+import mui from '../../assest/images/mui.png'
+import tailwind from '../../assest/images/tailwind.png'
 const skills = [
   { img: `${html}`, name: "HTML" },
   { img: `${css3}`, name: "CSS3" },
+  { img: `${javascript}`, name: "Javascript" },
+  { img: `${typescript}`, name: "Typescript" },
   { img: `${react}`, name: "React" },
   { img: `${github}`, name: "Github" },
   { img: `${firebase}`, name: "Firebase" },
+  { img: `${redux}`, name: "Redux" },
+  { img: `${bootstrap}`, name: "bootstrap" },
+  { img: `${mui}`, name: "MUI" },
+  { img: `${tailwind}`, name: "Tailwind" },
 ];
 export default function Skills() {
   const theme = useTheme();
