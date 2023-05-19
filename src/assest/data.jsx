@@ -81,6 +81,6 @@ export const projects = [
     id: 6,
     details: "responsive Social App ,add posts and comments ,profile page,singin page,signup page ",
     skills: "React,Mui,Css3,Firebase",
-    rojectURL:"https://level4-mui.web.app/signup"
+    rojectURL:"https://level4-mui.web.app/"
   },
 ];
