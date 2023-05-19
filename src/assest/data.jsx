@@ -73,7 +73,7 @@ export const projects = [
     id: 5,
     details: "responsive Gym Website to show training machines and trainers ",
     skills: "React,Tailwind,Css3",
-    rojectURL:"https://gleeful-bavarois-0ded04.netlify.app/"
+    projectURL:"https://gleeful-bavarois-0ded04.netlify.app/"
   },
   {
     imgURL: [`${fbApp1}`,`${fbApp2}`,`${fbApp3}`,`${fbApp4}`,`${fbApp5}`,`${fbApp6}`],
@@ -81,6 +81,6 @@ export const projects = [
     id: 6,
     details: "responsive Social App ,add posts and comments ,profile page,singin page,signup page ",
     skills: "React,Mui,Css3,Firebase",
-    rojectURL:"https://level4-mui.web.app/"
+    projectURL:"https://level4-mui.web.app/"
   },
 ];
